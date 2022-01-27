@@ -27,22 +27,38 @@ public class Main {
                 case 1: {
                     System.out.println("thêm sản phẩm");
                     try {
-                        productManagement.addnewproduct();
+                        productManagement.createProduct();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     break;
                 }
                 case 2: {
-                    System.out.println("danh sách sản phẩm");
+                    System.out.println("danh sach san pham");
                     try {
-                        productManagement.showAll();
+                        productManagement.showeListproduct();
                     } catch (IOException e) {
                         e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
                     }
-                    break;
+//                    System.out.println("danh sách sản phẩm");
+//                    try {
+//                        productManagement.showAll();
+//                    } catch (IOException e) {
+//                        e.printStackTrace();
+//                    }
+//                    break;
                 }
                 case 3: {
+                    System.out.println("nhập tên sản phẩm");
+                    try {
+                        productManagement.showeProduct();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (ClassNotFoundException e) {
+                        e.printStackTrace();
+                    }
                 }
             }
 

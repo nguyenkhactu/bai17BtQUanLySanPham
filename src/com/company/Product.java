@@ -1,12 +1,6 @@
 package com.company;
 
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
 
 public class Product implements Serializable {
     private int code;
@@ -55,19 +49,19 @@ public class Product implements Serializable {
         this.descriptions = descriptions;
     }
 
-    public Product() {
+    public Product(String code, String name, String manufacturer, double price, String descriptions) {
     }
 
-    public Product(int code, String name, String manufacturer, double price, String descriptions) {
-        this.code = code;
+    public Product(String name, String manufacturer, double price, String descriptions) {
         this.name = name;
         this.manufacturer = manufacturer;
         this.price = price;
         this.descriptions = descriptions;
     }
 
-    public Product(String name) {
+    public Product(String name, int code) {
         this.name = name;
+        this.code = code;
     }
 
     @Override
@@ -75,7 +69,7 @@ public class Product implements Serializable {
         return "Product :"
                 + "code :" + code + '\''
                 + "name :" + name + '\''
-                + "price :" + price+ '\''
+                + "price :" + price + '\''
                 + "manufacturer :" + manufacturer + '\''
                 + "descriptions" + descriptions;
     }
